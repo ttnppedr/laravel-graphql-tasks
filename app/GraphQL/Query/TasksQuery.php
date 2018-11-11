@@ -15,7 +15,7 @@ class TasksQuery extends Query
 
     public function type()
     {
-        return Type::listOf(GrapuQL::type('Task'));
+        return Type::listOf(GraphQL::type('Task'));
     }
 
     public function resolve($root, $args)
