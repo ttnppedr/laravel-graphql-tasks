@@ -124,10 +124,11 @@ return [
     'schemas' => [
         'default' => [
             'query' => [
-
+                'tasks' => \App\GraphQL\Query\TasksQuery::class,
             ],
             'mutation' => [
-
+                'newTask' => \App\GraphQL\Mutation\NewTaskMutation::class,
+                'updateTaskStatus' => \App\GraphQL\Mutation\UpdateTaskStatusMutation::class,
             ]
         ]
     ],
@@ -181,7 +182,7 @@ return [
      * ]
      */
     'types' => [
-
+        'Task' => \App\GraphQL\Type\TaskType::class,
     ],
 
     /*
