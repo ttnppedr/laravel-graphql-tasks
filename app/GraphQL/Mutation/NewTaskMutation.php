@@ -29,7 +29,7 @@ class NewTaskMutation extends Mutation
         ];
     }
 
-    public function resolke($root, $args)
+    public function resolve($root, $args)
     {
         $task = new Task();
 
