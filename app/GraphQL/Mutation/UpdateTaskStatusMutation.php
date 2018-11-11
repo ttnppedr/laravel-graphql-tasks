@@ -21,9 +21,9 @@ class UpdateTaskStatusMutation extends Mutation
     public function args()
     {
         return [
-            'title' => [
-                'name' => 'title',
-                'type' => Type::nonNull(Type::string()),
+            'id' => [
+                'name' => 'id',
+                'type' => Type::nonNull(Type::id()),
                 'rule' => ['required'],
             ],
             'status' => [
@@ -34,7 +34,7 @@ class UpdateTaskStatusMutation extends Mutation
         ];
     }
 
-    public function resolke($root, $args)
+    public function resolve($root, $args)
     {
         $task = Task::find($args['id']);
 
