@@ -125,6 +125,7 @@ return [
         'default' => [
             'query' => [
                 'tasks' => \App\GraphQL\Query\TasksQuery::class,
+                'users' => \App\GraphQL\Query\UsersQuery::class,
             ],
             'mutation' => [
                 'newTask' => \App\GraphQL\Mutation\NewTaskMutation::class,
