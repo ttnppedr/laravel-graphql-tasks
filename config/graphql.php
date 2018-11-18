@@ -183,6 +183,7 @@ return [
      */
     'types' => [
         'Task' => \App\GraphQL\Type\TaskType::class,
+        'User' => \App\GraphQL\Type\UserType::class,
     ],
 
     /*

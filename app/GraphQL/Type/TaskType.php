@@ -2,6 +2,7 @@
 
 namespace App\GraphQL\Type;
 
+use GraphQL;
 use GraphQL\Type\Definition\Type;
 use Folklore\GraphQL\Support\Type as GraphQLType;
 
@@ -26,6 +27,10 @@ class TaskType extends GraphQLType
             'is_completed' => [
                 'type' => Type::boolean(),
                 'description' => 'The status of a task'
+            ],
+            'owner' => [
+                'type' => GraphQL::type('User'),
+                'description' => 'The owner of a task'
             ],
         ];
     }
